@@ -1,5 +1,6 @@
 import gym
 import numpy as np
+import matplotlib.pyplot as plt
 
 args = {
     "start_range": [[-1.5, -0.5], [-1.5, 1.5]],
@@ -47,12 +48,10 @@ class RandomStartGoalPosition(gym.Wrapper):
 class ReducedObservation(gym.Wrapper):
 
     def __init__(self, env, args = args):
-        '''A wrapper that will randomly sample the start and goal position in a
-        specific range
+        '''A wrapper that will reduce the dimension of the observation
         args:
             env -- GazeboJackalNavigationEnv
-            start_range -- [[x_min, x_max], [y_min, y_max]]
-            goal_range -- [[x_min, x_max], [y_min, y_max]]
+            arg -- arguments of the wrapper
         '''
         super(ReducedObservation, self).__init__(env)
         self.reduction = args['reduction']
@@ -94,9 +93,48 @@ class ReducedObservation(gym.Wrapper):
         obs = self.obs_reduction(obs)
         return obs, rew, done, info
 
+class RewardShaping(gym.Wrapper):
+
+    def __init__(self, env, args = args):
+        '''A wrapper that will shape the reward by the length of the globle path
+        args:
+            env -- GazeboJackalNavigationEnv
+            start_range -- [[x_min, x_max], [y_min, y_max]]
+            goal_range -- [[x_min, x_max], [y_min, y_max]]
+        '''
+        super(RewardShaping, self).__init__(env)
+        self.global_path = self.env.navi_stack.robot_config.global_path
+        self.gp_len = sum([self.distance(self.global_path[i+1], self.global_path[i]) for i in range(len(self.global_path)-1)])
+        
+    def distance(self, p1, p2):
+        return ((p1[0]-p2[0])**2+(p1[1]-p2[1])**2)**0.5
+
+    def reset(self):
+        obs = self.env.reset()
+        self.global_path = self.env.navi_stack.robot_config.global_path
+        self.gp_len = sum([self.distance(self.global_path[i+1], self.global_path[i]) for i in range(len(self.global_path)-1)])
+        return obs
+
+    def visual_path(self):
+        plt.scatter(self.global_path[:,0], self.global_path[:,1])
+
+    def step(self, action):
+        # take one step
+        obs, rew, done, info = self.env.step(action)
+        # compute new globle path length
+        self.global_path = self.env.navi_stack.robot_config.global_path
+        gp_len = sum([self.distance(self.global_path[i+1], self.global_path[i]) for i in range(len(self.global_path)-1)])
+        # reward is the decrease of the distance
+        rew += self.gp_len - gp_len
+        rew += self.env.navi_stack.punish_rewrad()
+        self.gp_len = gp_len
+
+        return obs, rew, done, info
+
 
 wrapper_dict = {
     'random_start_goal': RandomStartGoalPosition,
     'reduced_observation': ReducedObservation,
+    'reward_shaping': RewardShaping,
     'default': lambda env: env
 }
