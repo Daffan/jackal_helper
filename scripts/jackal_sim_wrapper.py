@@ -105,7 +105,7 @@ class RewardShaping(gym.Wrapper):
         super(RewardShaping, self).__init__(env)
         self.global_path = self.env.navi_stack.robot_config.global_path
         self.gp_len = sum([self.distance(self.global_path[i+1], self.global_path[i]) for i in range(len(self.global_path)-1)])
-        
+
     def distance(self, p1, p2):
         return ((p1[0]-p2[0])**2+(p1[1]-p2[1])**2)**0.5
 
@@ -125,7 +125,7 @@ class RewardShaping(gym.Wrapper):
         self.global_path = self.env.navi_stack.robot_config.global_path
         gp_len = sum([self.distance(self.global_path[i+1], self.global_path[i]) for i in range(len(self.global_path)-1)])
         # reward is the decrease of the distance
-        rew += self.gp_len - gp_len
+        # rew += self.gp_len - gp_len
         rew += self.env.navi_stack.punish_rewrad()
         self.gp_len = gp_len
 
