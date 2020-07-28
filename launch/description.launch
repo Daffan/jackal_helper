@@ -1,0 +1,35 @@
+<launch>
+  <arg name="config" default="base" />
+  <!-- fix for oneweek project -->
+  <arg name="env_runner" value="$(eval 'env_run' if not optenv('OS', 'unknown').lower().startswith('windows') else 'env_run.bat')" />
+  <!-- the following seems to work too when in devel space, but not in install_isolated -->
+  <!-- <arg name="env_runner" value="env_run" /> -->
+
+  <!-- direct the path to where the custom configs locate -->
+  <param name="robot_description"
+         command="$(find jackal_description)/scripts/$(arg env_runner)
+                    $(find jackal_helper)/urdf/configs/$(arg config)
+                    $(find xacro)/xacro $(find jackal_helper)/urdf/jackal.urdf.xacro
+                    --inorder" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+
+  <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+    <remap from="cloud_in" to="/velodyne_points"/>
+    <remap from="scan" to="/front/scan"/>
+    <rosparam>
+        transform_tolerance: 0.01
+        min_height: 0.0
+        max_height: 0.5
+
+        angle_min: -3.1415926
+        angle_max: 3.1415926
+        angle_increment: 0.003
+        scan_time: 0.0
+        range_min: 0
+        range_max: 30
+        use_inf: true
+        concurrency_level: 0
+    </rosparam>
+  </node>
+</launch>

@@ -1,0 +1,32 @@
+{
+  "section": "DQN_fixed_start_goal_near_door",
+  "world_name": "85cm_split.world",
+  "VLP16": "false",
+  "gui": "false",
+  "init_position": [-1, -1, 0],
+  "goal_position": [0, 2, 0],
+  "wrapper": "reduced_observation",
+  "wrapper_args": {
+    "start_range": [[-1.5, -0.5], [-1.5, 1.5]],
+    "goal_range": [[0.5, 1.5], [-1.5, 1.5]],
+    "seed": 43,
+
+    "reduction": 10,
+    "polar_goal": "true",
+    "centered_bin": "",
+    "reward_shaping": "false"
+  },
+  "max_step": 50,
+  "timesteps_per_actorbatch": 64,
+  "buffer_size": 10000,
+  "time_step": 1,
+  "init_max_vel_x": 0.2,
+  "max_vel_x_delta": 0.2,
+  "total_steps": 50000,
+  "policy_network": "MlpPolicy",
+  "policy_kwargs": {"net_arch":[64, 64]},
+  "algorithm": "DQN",
+  "lr_schedule": "linear",
+  "learning_rate": 0.001,
+  "gamma": 0.95
+}
