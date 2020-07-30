@@ -46,8 +46,9 @@ if config['wrapper']:
                                         goal_position = config['goal_position'],
                                         max_step = config['max_step'],
                                         time_step = config['time_step'],
-                                        init_max_vel_x = config['init_max_vel_x'],
-                                        max_vel_x_delta = config['max_vel_x_delta']
+                                        param_delta = config['param_delta'],
+                                        param_init = config['param_init'],
+                                        param_list = config['param_list']
                                         ), config['wrapper_args'])
 else:
     env = gym.make('jackal_navigation-v0',
@@ -58,8 +59,9 @@ else:
                     goal_position = config['goal_position'],
                     max_step = config['max_step'],
                     time_step = config['time_step'],
-                    init_max_vel_x = config['init_max_vel_x'],
-                    max_vel_x_delta = config['max_vel_x_delta']
+                    param_delta = config['param_delta'],
+                    param_init = config['param_init'],
+                    param_list = config['param_list']
                     )
 
 class SaveEveryStepIntervalsCallback(BaseCallback):

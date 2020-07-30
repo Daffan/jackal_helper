@@ -112,20 +112,28 @@ class RewardShaping(gym.Wrapper):
     def reset(self):
         obs = self.env.reset()
         self.global_path = self.env.navi_stack.robot_config.global_path
-        self.gp_len = sum([self.distance(self.global_path[i+1], self.global_path[i]) for i in range(len(self.global_path)-1)])
+        p_robot = [self.env.navi_stack.robot_config.X, self.env.navi_stack.robot_config.Y]
+        idx = np.argmin([self.distance(p, p_robot) for p in self.global_path])
+        self.gp_len = sum([self.distance(self.global_path[i+1], self.global_path[i]) for i in range(len(self.global_path)-1) if i>idx])
+        self.gp_len += self.distance(p_robot, self.global_path[idx+1])
         return obs
 
     def visual_path(self):
         plt.scatter(self.global_path[:,0], self.global_path[:,1])
+        plt.scatter(self.env.navi_stack.robot_config.X, self.env.navi_stack.robot_config.Y)
+        plt.show()
 
     def step(self, action):
         # take one step
         obs, rew, done, info = self.env.step(action)
         # compute new globle path length
         self.global_path = self.env.navi_stack.robot_config.global_path
-        gp_len = sum([self.distance(self.global_path[i+1], self.global_path[i]) for i in range(len(self.global_path)-1)])
+        p_robot = [self.env.navi_stack.robot_config.X, self.env.navi_stack.robot_config.Y]
+        idx = np.argmin([self.distance(p, p_robot) for p in self.global_path])
+        gp_len = sum([self.distance(self.global_path[i+1], self.global_path[i]) for i in range(len(self.global_path)-1) if i>idx])
+        gp_len += self.distance(p_robot, self.global_path[idx+1])
         # reward is the decrease of the distance
-        # rew += self.gp_len - gp_len
+        rew += self.gp_len - gp_len
         rew += self.env.navi_stack.punish_rewrad()
         self.gp_len = gp_len
 
