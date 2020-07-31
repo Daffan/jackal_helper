@@ -1,11 +1,14 @@
+import sys
 import jackal_envs
 import gym
 from jackal_sim_wrapper import *
 
 import numpy
+sys.path.remove('/opt/ros/melodic/lib/python2.7/dist-packages')
 from stable_baselines import DQN, PPO2, A2C, ACKTR
 from stable_baselines.common.cmd_util import make_vec_env
 from stable_baselines.common.callbacks import BaseCallback
+sys.path.append('/opt/ros/melodic/lib/python2.7/dist-packages')
 
 import pickle
 import argparse
