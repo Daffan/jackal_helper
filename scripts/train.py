@@ -4,7 +4,10 @@ import gym
 from jackal_sim_wrapper import *
 
 import numpy
-sys.path.remove('/opt/ros/melodic/lib/python2.7/dist-packages')
+try:
+    sys.path.remove('/opt/ros/melodic/lib/python2.7/dist-packages')
+except:
+    pass
 from stable_baselines import DQN, PPO2, A2C, ACKTR
 from stable_baselines.common.cmd_util import make_vec_env
 from stable_baselines.common.callbacks import BaseCallback
@@ -79,7 +82,7 @@ class SaveEveryStepIntervalsCallback(BaseCallback):
             self.model.save(os.path.join(self.save_path, 'model_%d' %(self.n_calls)))
 
         return True
-callback = SaveEveryStepIntervalsCallback(5000, save_path)
+callback = SaveEveryStepIntervalsCallback(500, save_path)
 
 if config['algorithm'] == 'ACKTR':
     env = make_vec_env(lambda: env, n_envs=1)

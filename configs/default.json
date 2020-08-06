@@ -4,7 +4,7 @@
   "VLP16": "false",
   "gui": "true",
   "init_position": [-8, 0, 0],
-  "goal_position": [46, 0, 0],
+  "goal_position": [54, 0, 0],
   "param_delta": [0.2, 0.3, 1, 2, 0.2, 0.2],
   "param_init": [0.5, 1.57, 6, 20, 0.75, 1],
   "param_list": ["max_vel_x", "max_vel_theta", "vx_samples", "vtheta_samples", "path_distance_bias", "goal_distance_bias"],
@@ -17,17 +17,20 @@
     "reduction": 10,
     "polar_goal": "true",
     "centered_bin": "",
-    "reward_shaping": "false"
+    "reward_shaping": "false",
+
+    "goal_distance_reward": "true",
+    "stuck_punishment": 1
   },
   "max_step": 300,
   "timesteps_per_actorbatch": 64,
-  "buffer_size": 10000,
+  "buffer_size": 50000,
   "time_step": 1,
-  "total_steps": 300000,
+  "total_steps": 10000,
   "policy_network": "MlpPolicy",
   "policy_kwargs": {"net_arch":[128, 128]},
   "algorithm": "PPO2",
-  "lr_schedule": "linear",
+  "lr_schedule": "constant",
   "learning_rate": 0.001,
-  "gamma": 0.95
+  "gamma": 0.99
 }

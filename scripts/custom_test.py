@@ -22,21 +22,30 @@ avg = args.avg
 
 config = {
   "section": "ACKTR_random_start_goal",
-  "world_name": "85cm_split.world",
+  "world_name": "sequential_applr_testbed.world",
   "VLP16": "false",
   "gui": "false",
-  "init_position": [-1, -1, 0],
-  "goal_position": [0, 2, 0],
-  "wrapper": "",
+  "wrapper": "reward_shaping",
   "wrapper_args": {
     "start_range": [[-1.5, -0.5], [-1.5, 1.5]],
     "goal_range": [[0.5, 1.5], [-1.5, 1.5]],
-    "seed": 43
+    "seed": 43,
+
+    "reduction": 10,
+    "polar_goal": "true",
+    "centered_bin": "",
+    "reward_shaping": "false",
+
+    "goal_distance_reward": "false",
+    "stuck_punishment": 100
   },
-  "max_step": 50,
+  "max_step": 300,
   "time_step": 1,
-  "init_max_vel_x": 0.1,
-  "max_vel_x_delta": 0.2,
+  "init_position": [-8, 0, 0],
+  "goal_position": [54, 0, 0],
+  "param_delta": [0.2, 0.3, 1, 2, 0.2, 0.2],
+  "param_init": [1.5, 3.14, 6, 20, 0.75, 1],
+  "param_list": ["max_vel_x", "max_vel_theta", "vx_samples", "vtheta_samples", "path_distance_bias", "goal_distance_bias"],
   "total_steps": 50000,
   "policy_network": "MlpPolicy",
   "algorithm": "ACKTR",
@@ -58,8 +67,9 @@ if config['wrapper']:
                                         goal_position = config['goal_position'],
                                         max_step = config['max_step'],
                                         time_step = config['time_step'],
-                                        init_max_vel_x = config['init_max_vel_x'],
-                                        max_vel_x_delta = config['max_vel_x_delta']
+                                        param_delta = config['param_delta'],
+                                        param_init = config['param_init'],
+                                        param_list = config['param_list']
                                         ), config['wrapper_args'])
 else:
     env = gym.make('jackal_navigation-v0',
@@ -70,24 +80,32 @@ else:
                     goal_position = config['goal_position'],
                     max_step = config['max_step'],
                     time_step = config['time_step'],
-                    init_max_vel_x = config['init_max_vel_x'],
-                    max_vel_x_delta = config['max_vel_x_delta']
+                    param_delta = config['param_delta'],
+                    param_init = config['param_init'],
+                    param_list = config['param_list']
                     )
 
 rs = []
+cs = []
 succeed = 0
 for i in range(avg):
     print("Running: %d/%d" %(i+1, avg), end="\r")
     r = 0
     obs = env.reset()
     done = False
+    count = 0
     while not done:
-        obs, reward, done, info = env.step(0)
+        count += 1
+        obs, reward, done, info = env.step([1]*len(env.param_list))
+        for init, pn in zip(env.param_init, env.param_list):
+            env.navi_stack.set_navi_param(pn, init)
         r += reward
-    if r != -config['max_step']:
+        print(reward, count)
+    if count != config['max_step'] and reward != -1000:
         succeed += 1
-    rs.append(r)
-print("max_vel: %.2f \t succeed: %d/%d \t episode reward: %.2f" %(config['init_max_vel_x'], succeed, avg, sum(rs)/float((len(rs)))))
+        rs.append(r)
+        cs.append(count)
+print("succeed: %d/%d \t episode reward: %.2f \t steps: %d" %(succeed, avg, sum(rs)/float((len(rs))), sum(cs)/float((len(cs)))))
 
 env.close()
 

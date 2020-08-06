@@ -13,7 +13,7 @@ import os
 import json
 
 parser = argparse.ArgumentParser(description = 'Jackal navigation simulation')
-parser.add_argument('--model', dest = 'model', type = str, default = '../results/ACKTR_random_start_goal_2020_07_12_16_08', help = 'path to the saved model and configuration')
+parser.add_argument('--model', dest = 'model', type = str, default = '../results/PPO_testbed_2020_08_02_23_43', help = 'path to the saved model and configuration')
 parser.add_argument('--record', dest='record', action='store_true')
 parser.add_argument('--gui', dest='gui', action='store_true')
 parser.add_argument('--seed', dest='seed', type = int, default = 43)
@@ -56,8 +56,9 @@ if config['wrapper']:
                                         goal_position = config['goal_position'],
                                         max_step = config['max_step'],
                                         time_step = config['time_step'],
-                                        init_max_vel_x = config['init_max_vel_x'],
-                                        max_vel_x_delta = config['max_vel_x_delta']
+                                        param_delta = config['param_delta'],
+                                        param_init = config['param_init'],
+                                        param_list = config['param_list']
                                         ), config['wrapper_args'])
 else:
     env = gym.make('jackal_navigation-v0',
@@ -68,8 +69,9 @@ else:
                     goal_position = config['goal_position'],
                     max_step = config['max_step'],
                     time_step = config['time_step'],
-                    init_max_vel_x = config['init_max_vel_x'],
-                    max_vel_x_delta = config['max_vel_x_delta']
+                    param_delta = config['param_delta'],
+                    param_init = config['param_init'],
+                    param_list = config['param_list']
                     )
 
 if config['algorithm'] == 'ACKTR':
@@ -79,43 +81,49 @@ elif config['algorithm'] == 'PPO2':
 elif config['algorithm'] == 'DQN':
     model = DQN.load(model_path)
 
+range_dict = {
+    'max_vel_x': [0.1, 2],
+    'max_vel_theta': [0.314, 3.14],
+    'vx_samples': [1, 12],
+    'vtheta_samples': [1, 40],
+    'path_distance_bias': [0.1, 1.5],
+    'goal_distance_bias': [0.1, 2]
+}
+
 rs = []
+cs = []
+pms = np.array(config['param_init'])
+pms = np.expand_dims(pms, -1)
 succeed = 0
 for i in range(avg):
     print("Running: %d/%d" %(i+1, avg), end="\r")
     r = 0
+    count = 0
     obs = env.reset()
     done = False
-    actions = []
     while not done:
         action, _ = model.predict(obs)
-        obs, reward, done, info = env.step(action)
-        actions.append(action)
+        obs, reward, done, params = env.step(action)
+        params = np.array(params['params'])
+        pms = np.append(pms, np.expand_dims(params, -1), -1)
         r += reward
-    if r != -config['max_step']:
+        count += 1
+    if count != config['max_step'] and reward != -1000:
         succeed += 1
-    rs.append(r)
-print("max_vel: %.2f \t succeed: %d/%d \t episode reward: %.2f" %(config['init_max_vel_x'], succeed, avg, sum(rs)/float((len(rs)))))
+        rs.append(r)
+        cs.append(count)
+print("succeed: %d/%d \t episode reward: %.2f \t steps: %d" %(succeed, avg, sum(rs)/float((len(rs))), sum(cs)/float((len(cs)))))
 
 env.close()
 
 from matplotlib import pyplot as plt
-vm = config['init_max_vel_x']
-vms = [vm]
-for a in actions:
-    if a == 0:
-        pass
-    elif a == 1:
-        vm += config['max_vel_x_delta']
-        vm = min(2, vm)
-    elif a == 2:
-        vm -= config['max_vel_x_delta']
-        vm = max(0.1, vm)
-    vms.append(vm)
-plt.plot(vms)
+fig, axe = plt.subplots(6, 1, figsize = (6,18))
+
+for i in range(6):
+    axe[i].plot(pms[i, :])
+    axe[i].set_ylabel(config['param_list'][i])
 plt.show()
 
-print(vms)
 
 ######## About recording ###########
 # Add the camera model to the world you used to train
