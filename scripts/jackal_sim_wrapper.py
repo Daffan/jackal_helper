@@ -138,7 +138,7 @@ class RewardShaping(gym.Wrapper):
         self.rp.append(rp)
 
         if len(self.rp) > 100:
-            if (np.sqrt(np.sum((s0lf.rp[-1]-self.rp[-100])**2))) < 0.4:
+            if (np.sqrt(np.sum((self.rp[-1]-self.rp[-100])**2))) < 0.4:
                 done = True
                 rew = -1000
         if msg.pose.position.z > 0.1: # or

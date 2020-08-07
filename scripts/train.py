@@ -103,7 +103,7 @@ elif config['algorithm'] == 'DQN':
     model = DQN(config['policy_network'], env,
                     learning_rate = config['learning_rate'],
                     buffer_size = config['buffer_size'],
-                    target_network_update_freq = 128,
+                    target_network_update_freq = 64,
                     gamma = config['gamma'], # policy_kwargs = config['policy_kwargs'],
                     verbose=1, tensorboard_log = save_path)
 

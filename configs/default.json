@@ -1,5 +1,5 @@
 {
-  "section": "PPO_testbed",
+  "section": "DQN_testbed",
   "world_name": "sequential_applr_testbed.world",
   "VLP16": "false",
   "gui": "true",
@@ -20,17 +20,17 @@
     "reward_shaping": "false",
 
     "goal_distance_reward": "true",
-    "stuck_punishment": 1
+    "stuck_punishment": 0.5
   },
   "max_step": 300,
   "timesteps_per_actorbatch": 64,
   "buffer_size": 50000,
   "time_step": 1,
-  "total_steps": 10000,
+  "total_steps": 20000,
   "policy_network": "MlpPolicy",
   "policy_kwargs": {"net_arch":[128, 128]},
   "algorithm": "PPO2",
   "lr_schedule": "constant",
-  "learning_rate": 0.001,
+  "learning_rate": 0.005,
   "gamma": 0.99
 }
