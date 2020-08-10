@@ -29,8 +29,8 @@
   "total_steps": 20000,
   "policy_network": "MlpPolicy",
   "policy_kwargs": {"net_arch":[128, 128]},
-  "algorithm": "PPO2",
+  "algorithm": "DQN",
   "lr_schedule": "constant",
-  "learning_rate": 0.005,
+  "learning_rate": 0.001,
   "gamma": 0.99
 }

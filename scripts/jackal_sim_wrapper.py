@@ -144,6 +144,8 @@ class RewardShaping(gym.Wrapper):
         if msg.pose.position.z > 0.1: # or
             done = True
             rew = -1000
+        if msg.pose.position.x > 42: # or
+            done = True
 
 
 

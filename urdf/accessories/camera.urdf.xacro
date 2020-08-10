@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="camera_robot">
+
+  <xacro:property name="M_PI" value="3.1415926535897931" />
+  <xacro:property name="camera_size" value="0.1" />
+  <xacro:property name="offset_from_link_x" value="0.0" />
+  <xacro:property name="offset_from_link_y" value="0.0" />
+  <xacro:property name="offset_from_link_z" value="24.0" />
+
+  <link name="camera_link">
+    <visual>
+      <geometry>
+        <box size="${camera_size} ${camera_size} ${camera_size}"/>
+      </geometry>
+    </visual>
+    <!-- <sensor type="camera" name="camera_sensor">
+      <camera>
+        <save enabled="true">
+          <path>/tmp/camera_save</path>
+        </save>
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+          <width>1020</width>
+          <height>1020</height>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+      </camera>
+      <always_on>1</always_on>
+      <format>R8G8B8</format>
+      <update_rate>30</update_rate>
+    </sensor> -->
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="front_mount"/>
+    <child link="camera_link"/>
+    <origin rpy="0 0 0" xyz="${offset_from_link_x} ${offset_from_link_y} ${offset_from_link_z}"/>
+    <axis xyz="1 0 0" />
+  </joint>
+
+  <!-- camera -->
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="camera_sensor">
+      <camera name="head">
+        <save enabled="true">
+          <path>/tmp/camera_save</path>
+        </save>
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+          <width>1080</width>
+          <height>1080</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>1</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>jackal/camera_sensor</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>

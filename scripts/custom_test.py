@@ -25,6 +25,7 @@ config = {
   "world_name": "sequential_applr_testbed.world",
   "VLP16": "false",
   "gui": "false",
+  "camera": "false",
   "wrapper": "reward_shaping",
   "wrapper_args": {
     "start_range": [[-1.5, -0.5], [-1.5, 1.5]],
@@ -36,15 +37,15 @@ config = {
     "centered_bin": "",
     "reward_shaping": "false",
 
-    "goal_distance_reward": "false",
-    "stuck_punishment": 100
+    "goal_distance_reward": "true",
+    "stuck_punishment": 0.5
   },
   "max_step": 300,
   "time_step": 1,
   "init_position": [-8, 0, 0],
   "goal_position": [54, 0, 0],
   "param_delta": [0.2, 0.3, 1, 2, 0.2, 0.2],
-  "param_init": [1.5, 3.14, 6, 20, 0.75, 1],
+  "param_init": [1.5-0.2, 3.14-0.3, 6-1, 20-2, 0.75-0.2, 1-0.2],
   "param_list": ["max_vel_x", "max_vel_theta", "vx_samples", "vtheta_samples", "path_distance_bias", "goal_distance_bias"],
   "total_steps": 50000,
   "policy_network": "MlpPolicy",
@@ -96,7 +97,7 @@ for i in range(avg):
     count = 0
     while not done:
         count += 1
-        obs, reward, done, info = env.step([1]*len(env.param_list))
+        obs, reward, done, info = env.step(63)
         for init, pn in zip(env.param_init, env.param_list):
             env.navi_stack.set_navi_param(pn, init)
         r += reward

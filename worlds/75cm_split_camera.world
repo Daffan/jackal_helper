@@ -114,7 +114,7 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <uri>file://media/materials/scripts/g${M_PI/2}azebo.material</uri>
               <name>Gazebo/Grey</name>
             </script>
             <ambient>1 1 1 1</ambient>
@@ -244,6 +244,7 @@
             </clip>
           </camera>
           <always_on>1</always_on>
+          <format>R8G8B8</format>
           <update_rate>30</update_rate>
         </sensor>
       </link>

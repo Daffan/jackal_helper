@@ -8,13 +8,15 @@
   <!-- Short-term hack to support the original front_laser:=true argument for spawning
        the simulator. This will be removed in favour of using the config:=x arg instead. -->
   <arg name="VLP16" default="true" />
+  <arg name="camera" default="false" />
   <arg name="default_config" value="VLP16" if="$(arg VLP16)" />
   <arg name="default_config" value="LSM" unless="$(arg VLP16)" />
   <!-- end of hack -->
 
   <!-- Configuration of Jackal which you would like to simulate.
        See jackal_description for details. -->
-  <arg name="config" default="$(arg default_config)" />
+  <arg name="config" value="camera" if="$(arg camera)" />
+  <arg name="config" value="$(arg default_config)" unless="$(arg camera)"/>
 
   <!-- Launch Gazebo with the specified world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">

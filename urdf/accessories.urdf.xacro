@@ -54,6 +54,9 @@
     </joint>
   </xacro:if>
 
+  <xacro:if value="$(optenv CAMERA 0)">
+    <xacro:include filename="$(find jackal_helper)/urdf/accessories/camera.urdf.xacro" />
+  </xacro:if>
   <!-- Common camera mounts and accessory URDFs. -->
   <!-- <xacro:include filename="$(find jackal_description)/urdf/accessories/camera_mount.urdf.xacro" /> -->
   <!-- <xacro:include filename="$(find pointgrey_camera_description)/urdf/pointgrey_flea3.urdf.xacro" /> -->
