@@ -42,7 +42,7 @@ with open(config_path, 'rb') as f:
 
 env_config = config['env_config']
 wrapper_config = config['wrapper_config']
-training_config = config['trainig_config']
+training_config = config['training_config']
 
 # Config logging
 now = datetime.now()
@@ -50,7 +50,7 @@ dt_string = now.strftime("%Y_%m_%d_%H_%M")
 save_path = os.path.join(save_path, config['section'] + "_" + dt_string)
 if not os.path.exists(save_path):
     os.mkdir(save_path)
-
+writer = SummaryWriter(save_path)
 with open(os.path.join(save_path, 'config.json'), 'w') as fp:
     json.dump(config, fp)
 
@@ -63,13 +63,16 @@ np.random.seed(config['seed'])
 torch.manual_seed(config['seed'])
 train_envs.seed(config['seed'])
 
-net = Net(training_config['layer_num'], env.state_shape, env.action_shape, config['device']).to(config['device'])
+state_shape = env.observation_space.shape or env.observation_space.n
+action_shape = env.action_space.shape or env.action_space.n
+
+net = Net(training_config['layer_num'], state_shape, action_shape, config['device']).to(config['device'])
 optim = torch.optim.Adam(net.parameters(), lr=training_config['learning_rate'])
 policy = DQNPolicy(
         net, optim, training_config['gamma'], training_config['n_step'],
         target_update_freq=training_config['target_update_freq'])
 
-if trainig_config['prioritized_replay']:
+if training_config['prioritized_replay']:
     buf = PrioritizedReplayBuffer(
             training_config['buffer_size'],
             alpha=training_config['alpha'], beta=training_config['beta'])
@@ -78,6 +81,8 @@ else:
 
 train_collector = Collector(policy, train_envs, buf)
 train_collector.collect(n_step=training_config['batch_size'])
+
+train_fn =lambda e: torch.save(policy.state_dict(), os.path.join(save_path, 'policy_%d.pth' %(e)))
 
 result = offpolicy_trainer(
         policy, train_collector, training_config['epoch'],

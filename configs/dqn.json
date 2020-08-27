@@ -6,7 +6,7 @@
     "world_name": "sequential_applr_testbed.world",
     "VLP16": "false",
     "gui": "true",
-    "max_steps": 300,
+    "max_step": 300,
     "time_step": 1,
     "init_position": [-8, 0, 0],
     "goal_position": [54, 0, 0],
@@ -35,13 +35,13 @@
     "layer_num": 2,
     "hidden_layer_size": 128,
     "gamma": 0.99,
-    "n_step": 1, // how many steps to look ahead
+    "n_step": 1,
     "target_update_freq": 16,
     "prioritized_replay": false,
-    "buffer_size": 20000
-    "epoch": 20,
-    "step_per_epoch": 1000,
+    "buffer_size": 20000,
+    "epoch": 10,
+    "step_per_epoch": 2000,
     "collect_per_step": 1,
-    "batch_size": 64,
+    "batch_size": 64
   }
 }
