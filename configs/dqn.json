@@ -6,6 +6,8 @@
     "world_name": "sequential_applr_testbed.world",
     "VLP16": "false",
     "gui": "true",
+    "max_steps": 300,
+    "time_step": 1,
     "init_position": [-8, 0, 0],
     "goal_position": [54, 0, 0],
     "param_delta": [0.2, 0.3, 1, 2, 0.2, 0.2],
@@ -29,6 +31,7 @@
     }
   },
   "training_config": {
+    "learning_rate": 0.001,
     "layer_num": 2,
     "hidden_layer_size": 128,
     "gamma": 0.99,

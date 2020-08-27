@@ -26,7 +26,7 @@ from datetime import datetime
 import os
 
 parser = argparse.ArgumentParser(description = 'Jackal navigation simulation')
-parser.add_argument('--config', dest = 'config_path', type = str, default = '../configs/default.json', help = 'path to the configuration file')
+parser.add_argument('--config', dest = 'config_path', type = str, default = '../configs/dqn.json', help = 'path to the configuration file')
 parser.add_argument('--save', dest = 'save_path', type = str, default = '../results/', help = 'path to the saving folder')
 
 args = parser.parse_args()
@@ -55,7 +55,7 @@ with open(os.path.join(save_path, 'config.json'), 'w') as fp:
     json.dump(config, fp)
 
 # initialize the env --> num_env can only be one right now
-env = wrapper_dict[config['wrapper']](gym.make('jackal_navigation-v0', **env_config), config['wrapper_args'])
+env = wrapper_dict[wrapper_config['wrapper']](gym.make('jackal_navigation-v0', **env_config), wrapper_config['wrapper_args'])
 train_envs = DummyVectorEnv([lambda: env for _ in range(1)])
 
 # config random seed
@@ -63,8 +63,8 @@ np.random.seed(config['seed'])
 torch.manual_seed(config['seed'])
 train_envs.seed(config['seed'])
 
-net = Net(training_config['layer_num'], env.state_shape, env.action_shape, config['device']).to(args.device)
-optim = torch.optim.Adam(net.parameters(), lr=args.lr)
+net = Net(training_config['layer_num'], env.state_shape, env.action_shape, config['device']).to(config['device'])
+optim = torch.optim.Adam(net.parameters(), lr=training_config['learning_rate'])
 policy = DQNPolicy(
         net, optim, training_config['gamma'], training_config['n_step'],
         target_update_freq=training_config['target_update_freq'])
