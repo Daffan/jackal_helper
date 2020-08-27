@@ -1,0 +1,44 @@
+{
+  "section": "DQN_testbed",
+  "seed": 43,
+  "device": "cpu",
+  "env_config": {
+    "world_name": "sequential_applr_testbed.world",
+    "VLP16": "false",
+    "gui": "true",
+    "init_position": [-8, 0, 0],
+    "goal_position": [54, 0, 0],
+    "param_delta": [0.2, 0.3, 1, 2, 0.2, 0.2],
+    "param_init": [0.5, 1.57, 6, 20, 0.75, 1],
+    "param_list": ["max_vel_x", "max_vel_theta", "vx_samples", "vtheta_samples", "path_distance_bias", "goal_distance_bias"]
+  },
+  "wrapper_config": {
+    "wrapper": "reward_shaping",
+    "wrapper_args": {
+      "start_range": [[-1.5, -0.5], [-1.5, 1.5]],
+      "goal_range": [[0.5, 1.5], [-1.5, 1.5]],
+      "seed": 43,
+
+      "reduction": 10,
+      "polar_goal": "true",
+      "centered_bin": "",
+      "reward_shaping": "false",
+
+      "goal_distance_reward": "true",
+      "stuck_punishment": 0.5
+    }
+  },
+  "training_config": {
+    "layer_num": 2,
+    "hidden_layer_size": 128,
+    "gamma": 0.99,
+    "n_step": 1, // how many steps to look ahead
+    "target_update_freq": 16,
+    "prioritized_replay": false,
+    "buffer_size": 20000
+    "epoch": 20,
+    "step_per_epoch": 1000,
+    "collect_per_step": 1,
+    "batch_size": 64,
+  }
+}
