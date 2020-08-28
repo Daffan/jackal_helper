@@ -82,11 +82,13 @@ else:
 train_collector = Collector(policy, train_envs, buf)
 train_collector.collect(n_step=training_config['batch_size'])
 
-train_fn =lambda e: torch.save(policy.state_dict(), os.path.join(save_path, 'policy_%d.pth' %(e)))
+train_fn =lambda e: [policy.set_eps(max(0.05, 1-e/training_config['epoch']/training_config['exploration_ratio'])),
+                    torch.save(policy.state_dict(), os.path.join(save_path, 'policy_%d.pth' %(e)))]
 
 result = offpolicy_trainer(
         policy, train_collector, training_config['epoch'],
         training_config['step_per_epoch'], training_config['collect_per_step'],
-        training_config['batch_size'], train_fn=train_fn, writer=writer)
+        training_config['batch_size'], update_per_step=training_config['update_per_step'],
+        train_fn=train_fn, writer=writer)
 
 env.close()
