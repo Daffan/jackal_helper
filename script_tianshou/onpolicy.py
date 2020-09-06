@@ -21,7 +21,7 @@ def onpolicy_trainer(
         log_interval: int = 1,
         verbose: bool = True,
         test_in_train: bool = True,
-        writer: Optional[SummaryWriter] = None
+        writer: Optional[SummaryWriter] = None,
 ):
     """A wrapper for on-policy trainer procedure. The ``step`` in trainer means
     a policy network update.
