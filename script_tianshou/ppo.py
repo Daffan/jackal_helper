@@ -27,7 +27,7 @@ from datetime import datetime
 import os
 
 parser = argparse.ArgumentParser(description = 'Jackal navigation simulation')
-parser.add_argument('--config', dest = 'config_path', type = str, default = '../configs/dqn.json', help = 'path to the configuration file')
+parser.add_argument('--config', dest = 'config_path', type = str, default = '../configs/ppo.json', help = 'path to the configuration file')
 parser.add_argument('--save', dest = 'save_path', type = str, default = '../results/', help = 'path to the saving folder')
 
 args = parser.parse_args()
