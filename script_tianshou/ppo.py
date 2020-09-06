@@ -84,14 +84,14 @@ dist = torch.distributions.Categorical
 policy = PPOPolicy(
         actor, critic, optim, dist,
         training_config['gamma'],
-        eps_clip=config["eps_clip"],
-        vf_coef=config["vf_coef"],
-        ent_coef=config["ent_coef"],
+        eps_clip=training_config["eps_clip"],
+        vf_coef=training_config["vf_coef"],
+        ent_coef=training_config["ent_coef"],
         action_range=None,
-        gae_lambda=config["gae_lambda"],
-        reward_normalization=config["rew_norm"],
+        gae_lambda=training_config["gae_lambda"],
+        reward_normalization=training_config["rew_norm"],
         dual_clip=None,
-        value_clip=config["value_clip"])
+        value_clip=training_config["value_clip"])
 
 buf = ReplayBuffer(training_config['buffer_size'])
 train_collector = Collector(policy, train_envs, buf)
