@@ -16,7 +16,7 @@ from tianshou.policy import PPOPolicy
 from tianshou.utils.net.common import Net
 from tianshou.utils.net.discrete import Actor, Critic
 from tianshou.data import Collector, ReplayBuffer, PrioritizedReplayBuffer
-from offpolicy import offpolicy_trainer
+from onpolicy import onpolicy_trainer
 
 sys.path.append('/opt/ros/melodic/lib/python2.7/dist-packages')
 
@@ -101,7 +101,7 @@ train_fn =lambda e: [torch.save(policy.state_dict(), os.path.join(save_path, 'po
 result = onpolicy_trainer(
         policy, train_collector, training_config['epoch'],
         training_config['step_per_epoch'], training_config['collect_per_step'],
-        training_config['repaet_per_step'], training_config['batch_size'],
+        training_config['repeat_per_step'], training_config['batch_size'],
         train_fn=train_fn, writer=writer)
 
 env.close()
