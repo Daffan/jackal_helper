@@ -12,8 +12,9 @@ import torch
 from torch.utils.tensorboard import SummaryWriter
 
 from tianshou.env import DummyVectorEnv
-from tianshou.policy import DQNPolicy
+from tianshou.policy import PPOPolicy
 from tianshou.utils.net.common import Net
+from tianshou.utils.net.discrete import Actor, Critic
 from tianshou.data import Collector, ReplayBuffer, PrioritizedReplayBuffer
 from offpolicy import offpolicy_trainer
 
@@ -67,28 +68,42 @@ state_shape = env.observation_space.shape or env.observation_space.n
 action_shape = env.action_space.shape or env.action_space.n
 
 net = Net(training_config['layer_num'], state_shape, action_shape, config['device']).to(config['device'])
-optim = torch.optim.Adam(net.parameters(), lr=training_config['learning_rate'])
-policy = DQNPolicy(
-        net, optim, training_config['gamma'], training_config['n_step'],
-        target_update_freq=training_config['target_update_freq'])
+actor = Actor(net, action_shape).to(config['device'])
+critic = Critic(net).to(config['device'])
 
-if training_config['prioritized_replay']:
-    buf = PrioritizedReplayBuffer(
-            training_config['buffer_size'],
-            alpha=training_config['alpha'], beta=training_config['beta'])
-else:
-    buf = ReplayBuffer(training_config['buffer_size'])
+# orthogonal initialization
+for m in list(actor.modules()) + list(critic.modules()):
+    if isinstance(m, torch.nn.Linear):
+        torch.nn.init.orthogonal_(m.weight)
+        torch.nn.init.zeros_(m.bias)
+
+optim = torch.optim.Adam(list(actor.parameters()) + list(critic.parameters()),
+                            lr=training_config['learning_rate'])
+dist = torch.distributions.Categorical
+
+policy = PPOPolicy(
+        actor, critic, optim, dist,
+        training_config['gamma'],
+        eps_clip=config["eps_clip"],
+        vf_coef=config["vf_coef"],
+        ent_coef=config["ent_coef"],
+        action_range=None,
+        gae_lambda=config["gae_lambda"],
+        reward_normalization=config["rew_norm"],
+        dual_clip=None,
+        value_clip=config["value_clip"])
+
+buf = ReplayBuffer(training_config['buffer_size'])
 policy.set_eps(1)
 train_collector = Collector(policy, train_envs, buf)
 train_collector.collect(n_step=1)
 
-train_fn =lambda e: [policy.set_eps(max(0.05, 1-e/training_config['epoch']/training_config['exploration_ratio'])),
-                    torch.save(policy.state_dict(), os.path.join(save_path, 'policy_%d.pth' %(e)))]
+train_fn =lambda e: [torch.save(policy.state_dict(), os.path.join(save_path, 'policy_%d.pth' %(e)))]
 
-result = offpolicy_trainer(
+result = onpolicy_trainer(
         policy, train_collector, training_config['epoch'],
         training_config['step_per_epoch'], training_config['collect_per_step'],
-        training_config['batch_size'], update_per_step=training_config['update_per_step'],
+        training_config['repaet_per_step'], training_config['batch_size'],
         train_fn=train_fn, writer=writer)
 
 env.close()

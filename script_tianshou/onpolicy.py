@@ -9,20 +9,21 @@ from tianshou.utils import tqdm_config, MovAvg
 from tianshou.trainer import test_episode, gather_info
 
 
-def offpolicy_trainer(
+def onpolicy_trainer(
         policy: BasePolicy,
         train_collector: Collector,
         max_epoch: int,
         step_per_epoch: int,
         collect_per_step: int,
+        repeat_per_collect: int,
         batch_size: int,
-        update_per_step: int = 1,
         train_fn: Optional[Callable[[int], None]] = None,
-        writer: Optional[SummaryWriter] = None,
         log_interval: int = 1,
-) -> int:
-    """A wrapper for off-policy trainer procedure. The ``step`` in trainer
-    means a policy network update.
+        verbose: bool = True,
+        test_in_train: bool = True,
+):
+    """A wrapper for on-policy trainer procedure. The ``step`` in trainer means
+    a policy network update.
 
     :param policy: an instance of the :class:`~tianshou.policy.BasePolicy`
         class.
@@ -34,29 +35,30 @@ def offpolicy_trainer(
         process might be finished before reaching the ``max_epoch``.
     :param int step_per_epoch: the number of step for updating policy network
         in one epoch.
-    :param int collect_per_step: the number of frames the collector would
-        collect before the network update. In other words, collect some frames
-        and do some policy network update.
-    :param episode_per_test: the number of episodes for one policy evaluation.
+    :param int collect_per_step: the number of episodes the collector would
+        collect before the network update. In other words, collect some
+        episodes and do one policy network update.
+    :param int repeat_per_collect: the number of repeat time for policy
+        learning, for example, set it to 2 means the policy needs to learn each
+        given batch data twice.
     :param int batch_size: the batch size of sample data, which is going to
         feed in the policy network.
-    :param int update_per_step: the number of times the policy network would
-        be updated after frames are collected, for example, set it to 256 means
-        it updates policy 256 times once after ``collect_per_step`` frames are
-        collected.
     :param function train_fn: a function receives the current number of epoch
         index and performs some operations at the beginning of training in this
         epoch.
     :param torch.utils.tensorboard.SummaryWriter writer: a TensorBoard
         SummaryWriter.
     :param int log_interval: the log interval of the writer.
+    :param bool verbose: whether to print the information.
+    :param bool test_in_train: whether to test in the training phase.
 
     :return: See :func:`~tianshou.trainer.gather_info`.
     """
     global_step = 0
-    best_epoch, best_reward = -1, -1.
+    best_epoch, best_reward = -1, -1
     stat = {}
     start_time = time.time()
+    test_in_train = test_in_train and train_collector.policy == policy
     for epoch in range(1, 1 + max_epoch):
         # train
         policy.train()
@@ -65,29 +67,31 @@ def offpolicy_trainer(
         with tqdm.tqdm(total=step_per_epoch, desc=f'Epoch #{epoch}',
                        **tqdm_config) as t:
             while t.n < t.total:
-                assert train_collector.policy == policy
-                result = train_collector.collect(n_step=collect_per_step)
+                result = train_collector.collect(n_episode=collect_per_step)
                 data = {}
-                for i in range(update_per_step * min(
-                        result['n/st'] // collect_per_step, t.total - t.n)):
-                    global_step += collect_per_step
-                    losses = policy.update(batch_size, train_collector.buffer)
-                    for k in result.keys():
-                        data[k] = f'{result[k]:.2f}'
-                        if writer and global_step % log_interval == 0:
-                            writer.add_scalar('train/' + k, result[k],
-                                              global_step=global_step)
-                    for k in losses.keys():
-                        if stat.get(k) is None:
-                            stat[k] = MovAvg()
-                        stat[k].add(losses[k])
-                        data[k] = f'{stat[k].get():.6f}'
-                        if writer and global_step % log_interval == 0:
-                            writer.add_scalar(
-                                k, stat[k].get(), global_step=global_step)
-                    data['eps'] = policy.eps
-                    t.update(1)
-                    t.set_postfix(**data)
+                losses = policy.update(
+                    0, train_collector.buffer, batch_size, repeat_per_collect)
+                train_collector.reset_buffer()
+                step = 1
+                for k in losses.keys():
+                    if isinstance(losses[k], list):
+                        step = max(step, len(losses[k]))
+                global_step += step
+                for k in result.keys():
+                    data[k] = f'{result[k]:.2f}'
+                    if writer and global_step % log_interval == 0:
+                        writer.add_scalar(
+                            k, result[k], global_step=global_step)
+                for k in losses.keys():
+                    if stat.get(k) is None:
+                        stat[k] = MovAvg()
+                    stat[k].add(losses[k])
+                    data[k] = f'{stat[k].get():.6f}'
+                    if writer and global_step % log_interval == 0:
+                        writer.add_scalar(
+                            k, stat[k].get(), global_step=global_step)
+                t.update(step)
+                t.set_postfix(**data)
             if t.n <= t.total:
                 t.update()
     return global_step

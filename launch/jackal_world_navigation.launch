@@ -13,6 +13,8 @@
   <arg name="default_config" value="LSM" unless="$(arg VLP16)" />
   <!-- end of hack -->
 
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find jackal_helper)/configs/custom_rosconsole.conf"/>
+
   <!-- Configuration of Jackal which you would like to simulate.
        See jackal_description for details. -->
   <arg name="config" value="camera" if="$(arg camera)" />
