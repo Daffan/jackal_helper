@@ -1,5 +1,5 @@
 {
-  "section": "DQN_testbed",
+  "section": "PPO_testbed",
   "seed": 43,
   "device": "cpu",
   "env_config": {
@@ -37,10 +37,9 @@
     "gamma": 0.95,
     "buffer_size": 20000,
     "epoch": 10,
-    "step_per_epoch": 10000,
-    "collect_per_step": 500,
-    "repeat_per_step": 2000,
-    "traning_num": 20
+    "step_per_epoch": 20,
+    "collect_per_step": 200,
+    "repeat_per_step": 4,
     "batch_size": 64,
     "vf_coef": 0.5,
     "ent_coef": 0.0,

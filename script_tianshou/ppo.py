@@ -27,7 +27,7 @@ from datetime import datetime
 import os
 
 parser = argparse.ArgumentParser(description = 'Jackal navigation simulation')
-parser.add_argument('--config', dest = 'config_path', type = str, default = '../configs/dqn.json', help = 'path to the configuration file')
+parser.add_argument('--config', dest = 'config_path', type = str, default = '../configs/ppo.json', help = 'path to the configuration file')
 parser.add_argument('--save', dest = 'save_path', type = str, default = '../results/', help = 'path to the saving folder')
 
 args = parser.parse_args()
@@ -94,9 +94,7 @@ policy = PPOPolicy(
         value_clip=config["value_clip"])
 
 buf = ReplayBuffer(training_config['buffer_size'])
-policy.set_eps(1)
 train_collector = Collector(policy, train_envs, buf)
-train_collector.collect(n_step=1)
 
 train_fn =lambda e: [torch.save(policy.state_dict(), os.path.join(save_path, 'policy_%d.pth' %(e)))]
 
