@@ -67,7 +67,7 @@ train_envs.seed(config['seed'])
 state_shape = env.observation_space.shape or env.observation_space.n
 action_shape = env.action_space.shape or env.action_space.n
 
-net = Net(training_config['layer_num'], state_shape, config['device']).to(config['device'])
+net = Net(training_config['layer_num'], state_shape, device=config['device']).to(config['device'])
 actor = Actor(net, action_shape).to(config['device'])
 critic = Critic(net).to(config['device'])
 
