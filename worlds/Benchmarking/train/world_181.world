@@ -15,6 +15,7 @@
     </light>
     <model name='ground_plane'>
       <static>1</static>
+      <static>1</static>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -80,10 +81,11 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>    <model name='unit_cylinder_0'>
+      <static>1</static>
       <pose frame=''>-0.075000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -134,10 +136,11 @@
       </link>
     </model>
     <model name='unit_cylinder_1'>
+      <static>1</static>
       <pose frame=''>-0.225000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -188,10 +191,11 @@
       </link>
     </model>
     <model name='unit_cylinder_2'>
+      <static>1</static>
       <pose frame=''>-0.375000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -242,10 +246,11 @@
       </link>
     </model>
     <model name='unit_cylinder_3'>
+      <static>1</static>
       <pose frame=''>-0.525000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -296,10 +301,11 @@
       </link>
     </model>
     <model name='unit_cylinder_4'>
+      <static>1</static>
       <pose frame=''>-0.675000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -350,10 +356,11 @@
       </link>
     </model>
     <model name='unit_cylinder_5'>
+      <static>1</static>
       <pose frame=''>-0.825000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -404,10 +411,11 @@
       </link>
     </model>
     <model name='unit_cylinder_6'>
+      <static>1</static>
       <pose frame=''>-0.975000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -458,10 +466,11 @@
       </link>
     </model>
     <model name='unit_cylinder_7'>
+      <static>1</static>
       <pose frame=''>-1.125000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -512,10 +521,11 @@
       </link>
     </model>
     <model name='unit_cylinder_8'>
+      <static>1</static>
       <pose frame=''>-1.275000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -566,10 +576,11 @@
       </link>
     </model>
     <model name='unit_cylinder_9'>
+      <static>1</static>
       <pose frame=''>-1.425000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -620,10 +631,11 @@
       </link>
     </model>
     <model name='unit_cylinder_10'>
+      <static>1</static>
       <pose frame=''>-1.575000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -674,10 +686,11 @@
       </link>
     </model>
     <model name='unit_cylinder_11'>
+      <static>1</static>
       <pose frame=''>-1.725000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -728,10 +741,11 @@
       </link>
     </model>
     <model name='unit_cylinder_12'>
+      <static>1</static>
       <pose frame=''>-1.875000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -782,10 +796,11 @@
       </link>
     </model>
     <model name='unit_cylinder_13'>
+      <static>1</static>
       <pose frame=''>-2.025000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -836,10 +851,11 @@
       </link>
     </model>
     <model name='unit_cylinder_14'>
+      <static>1</static>
       <pose frame=''>-2.175000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -890,10 +906,11 @@
       </link>
     </model>
     <model name='unit_cylinder_15'>
+      <static>1</static>
       <pose frame=''>-2.325000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -944,10 +961,11 @@
       </link>
     </model>
     <model name='unit_cylinder_16'>
+      <static>1</static>
       <pose frame=''>-2.475000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -998,10 +1016,11 @@
       </link>
     </model>
     <model name='unit_cylinder_17'>
+      <static>1</static>
       <pose frame=''>-2.625000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1052,10 +1071,11 @@
       </link>
     </model>
     <model name='unit_cylinder_18'>
+      <static>1</static>
       <pose frame=''>-2.775000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1106,10 +1126,11 @@
       </link>
     </model>
     <model name='unit_cylinder_19'>
+      <static>1</static>
       <pose frame=''>-2.925000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1160,10 +1181,11 @@
       </link>
     </model>
     <model name='unit_cylinder_20'>
+      <static>1</static>
       <pose frame=''>-3.075000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1214,10 +1236,11 @@
       </link>
     </model>
     <model name='unit_cylinder_21'>
+      <static>1</static>
       <pose frame=''>-3.225000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1268,10 +1291,11 @@
       </link>
     </model>
     <model name='unit_cylinder_22'>
+      <static>1</static>
       <pose frame=''>-3.375000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1322,10 +1346,11 @@
       </link>
     </model>
     <model name='unit_cylinder_23'>
+      <static>1</static>
       <pose frame=''>-3.525000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1376,10 +1401,11 @@
       </link>
     </model>
     <model name='unit_cylinder_24'>
+      <static>1</static>
       <pose frame=''>-3.675000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1430,10 +1456,11 @@
       </link>
     </model>
     <model name='unit_cylinder_25'>
+      <static>1</static>
       <pose frame=''>-3.825000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1484,10 +1511,11 @@
       </link>
     </model>
     <model name='unit_cylinder_26'>
+      <static>1</static>
       <pose frame=''>-3.975000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1538,10 +1566,11 @@
       </link>
     </model>
     <model name='unit_cylinder_27'>
+      <static>1</static>
       <pose frame=''>-4.125000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1592,10 +1621,11 @@
       </link>
     </model>
     <model name='unit_cylinder_28'>
+      <static>1</static>
       <pose frame=''>-4.275000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1646,10 +1676,11 @@
       </link>
     </model>
     <model name='unit_cylinder_29'>
+      <static>1</static>
       <pose frame=''>-4.425000 0.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1700,10 +1731,11 @@
       </link>
     </model>
     <model name='unit_cylinder_30'>
+      <static>1</static>
       <pose frame=''>-0.075000 0.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1754,10 +1786,11 @@
       </link>
     </model>
     <model name='unit_cylinder_31'>
+      <static>1</static>
       <pose frame=''>-4.425000 0.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1808,10 +1841,11 @@
       </link>
     </model>
     <model name='unit_cylinder_32'>
+      <static>1</static>
       <pose frame=''>-0.075000 0.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1862,10 +1896,11 @@
       </link>
     </model>
     <model name='unit_cylinder_33'>
+      <static>1</static>
       <pose frame=''>-4.425000 0.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1916,10 +1951,11 @@
       </link>
     </model>
     <model name='unit_cylinder_34'>
+      <static>1</static>
       <pose frame=''>-0.075000 0.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -1970,10 +2006,11 @@
       </link>
     </model>
     <model name='unit_cylinder_35'>
+      <static>1</static>
       <pose frame=''>-4.425000 0.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2024,10 +2061,11 @@
       </link>
     </model>
     <model name='unit_cylinder_36'>
+      <static>1</static>
       <pose frame=''>-0.075000 0.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2078,10 +2116,11 @@
       </link>
     </model>
     <model name='unit_cylinder_37'>
+      <static>1</static>
       <pose frame=''>-4.425000 0.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2132,10 +2171,11 @@
       </link>
     </model>
     <model name='unit_cylinder_38'>
+      <static>1</static>
       <pose frame=''>-0.075000 0.825000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2186,10 +2226,11 @@
       </link>
     </model>
     <model name='unit_cylinder_39'>
+      <static>1</static>
       <pose frame=''>-4.425000 0.825000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2240,10 +2281,11 @@
       </link>
     </model>
     <model name='unit_cylinder_40'>
+      <static>1</static>
       <pose frame=''>-0.075000 0.975000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2294,10 +2336,11 @@
       </link>
     </model>
     <model name='unit_cylinder_41'>
+      <static>1</static>
       <pose frame=''>-4.425000 0.975000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2348,10 +2391,11 @@
       </link>
     </model>
     <model name='unit_cylinder_42'>
+      <static>1</static>
       <pose frame=''>-0.075000 1.125000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2402,10 +2446,11 @@
       </link>
     </model>
     <model name='unit_cylinder_43'>
+      <static>1</static>
       <pose frame=''>-4.425000 1.125000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2456,10 +2501,11 @@
       </link>
     </model>
     <model name='unit_cylinder_44'>
+      <static>1</static>
       <pose frame=''>-0.075000 1.275000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2510,10 +2556,11 @@
       </link>
     </model>
     <model name='unit_cylinder_45'>
+      <static>1</static>
       <pose frame=''>-4.425000 1.275000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2564,10 +2611,11 @@
       </link>
     </model>
     <model name='unit_cylinder_46'>
+      <static>1</static>
       <pose frame=''>-0.075000 1.425000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2618,10 +2666,11 @@
       </link>
     </model>
     <model name='unit_cylinder_47'>
+      <static>1</static>
       <pose frame=''>-4.425000 1.425000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2672,10 +2721,11 @@
       </link>
     </model>
     <model name='unit_cylinder_48'>
+      <static>1</static>
       <pose frame=''>-0.075000 1.575000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2726,10 +2776,11 @@
       </link>
     </model>
     <model name='unit_cylinder_49'>
+      <static>1</static>
       <pose frame=''>-4.425000 1.575000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2780,10 +2831,11 @@
       </link>
     </model>
     <model name='unit_cylinder_50'>
+      <static>1</static>
       <pose frame=''>-0.075000 1.725000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2834,10 +2886,11 @@
       </link>
     </model>
     <model name='unit_cylinder_51'>
+      <static>1</static>
       <pose frame=''>-4.425000 1.725000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2888,10 +2941,11 @@
       </link>
     </model>
     <model name='unit_cylinder_52'>
+      <static>1</static>
       <pose frame=''>-0.075000 1.875000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2942,10 +2996,11 @@
       </link>
     </model>
     <model name='unit_cylinder_53'>
+      <static>1</static>
       <pose frame=''>-4.425000 1.875000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -2996,10 +3051,11 @@
       </link>
     </model>
     <model name='unit_cylinder_54'>
+      <static>1</static>
       <pose frame=''>-0.075000 2.025000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3050,10 +3106,11 @@
       </link>
     </model>
     <model name='unit_cylinder_55'>
+      <static>1</static>
       <pose frame=''>-4.425000 2.025000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3104,10 +3161,11 @@
       </link>
     </model>
     <model name='unit_cylinder_56'>
+      <static>1</static>
       <pose frame=''>-0.075000 2.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3158,10 +3216,11 @@
       </link>
     </model>
     <model name='unit_cylinder_57'>
+      <static>1</static>
       <pose frame=''>-4.425000 2.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3212,10 +3271,11 @@
       </link>
     </model>
     <model name='unit_cylinder_58'>
+      <static>1</static>
       <pose frame=''>-0.075000 2.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3266,10 +3326,11 @@
       </link>
     </model>
     <model name='unit_cylinder_59'>
+      <static>1</static>
       <pose frame=''>-4.425000 2.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3320,10 +3381,11 @@
       </link>
     </model>
     <model name='unit_cylinder_60'>
+      <static>1</static>
       <pose frame=''>-0.075000 2.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3374,10 +3436,11 @@
       </link>
     </model>
     <model name='unit_cylinder_61'>
+      <static>1</static>
       <pose frame=''>-4.425000 2.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3428,10 +3491,11 @@
       </link>
     </model>
     <model name='unit_cylinder_62'>
+      <static>1</static>
       <pose frame=''>-0.075000 2.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3482,10 +3546,11 @@
       </link>
     </model>
     <model name='unit_cylinder_63'>
+      <static>1</static>
       <pose frame=''>-4.425000 2.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3536,10 +3601,11 @@
       </link>
     </model>
     <model name='unit_cylinder_64'>
+      <static>1</static>
       <pose frame=''>-0.075000 2.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3590,10 +3656,11 @@
       </link>
     </model>
     <model name='unit_cylinder_65'>
+      <static>1</static>
       <pose frame=''>-4.425000 2.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3644,10 +3711,11 @@
       </link>
     </model>
     <model name='unit_cylinder_66'>
+      <static>1</static>
       <pose frame=''>-0.075000 2.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3698,10 +3766,11 @@
       </link>
     </model>
     <model name='unit_cylinder_67'>
+      <static>1</static>
       <pose frame=''>-4.425000 2.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3752,10 +3821,11 @@
       </link>
     </model>
     <model name='unit_cylinder_68'>
+      <static>1</static>
       <pose frame=''>-0.075000 3.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3806,10 +3876,11 @@
       </link>
     </model>
     <model name='unit_cylinder_69'>
+      <static>1</static>
       <pose frame=''>-4.425000 3.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3860,10 +3931,11 @@
       </link>
     </model>
     <model name='unit_cylinder_70'>
+      <static>1</static>
       <pose frame=''>-0.075000 3.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3914,10 +3986,11 @@
       </link>
     </model>
     <model name='unit_cylinder_71'>
+      <static>1</static>
       <pose frame=''>-4.425000 3.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -3968,10 +4041,11 @@
       </link>
     </model>
     <model name='unit_cylinder_72'>
+      <static>1</static>
       <pose frame=''>-0.075000 3.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4022,10 +4096,11 @@
       </link>
     </model>
     <model name='unit_cylinder_73'>
+      <static>1</static>
       <pose frame=''>-4.425000 3.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4076,10 +4151,11 @@
       </link>
     </model>
     <model name='unit_cylinder_74'>
+      <static>1</static>
       <pose frame=''>-0.075000 3.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4130,10 +4206,11 @@
       </link>
     </model>
     <model name='unit_cylinder_75'>
+      <static>1</static>
       <pose frame=''>-4.425000 3.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4184,10 +4261,11 @@
       </link>
     </model>
     <model name='unit_cylinder_76'>
+      <static>1</static>
       <pose frame=''>-0.075000 3.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4238,10 +4316,11 @@
       </link>
     </model>
     <model name='unit_cylinder_77'>
+      <static>1</static>
       <pose frame=''>-4.425000 3.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4292,10 +4371,11 @@
       </link>
     </model>
     <model name='unit_cylinder_78'>
+      <static>1</static>
       <pose frame=''>-0.075000 3.825000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4346,10 +4426,11 @@
       </link>
     </model>
     <model name='unit_cylinder_79'>
+      <static>1</static>
       <pose frame=''>-4.425000 3.825000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4400,10 +4481,11 @@
       </link>
     </model>
     <model name='unit_cylinder_80'>
+      <static>1</static>
       <pose frame=''>-0.075000 3.975000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4454,10 +4536,11 @@
       </link>
     </model>
     <model name='unit_cylinder_81'>
+      <static>1</static>
       <pose frame=''>-4.425000 3.975000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4508,10 +4591,11 @@
       </link>
     </model>
     <model name='unit_cylinder_82'>
+      <static>1</static>
       <pose frame=''>-0.075000 4.125000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4562,10 +4646,11 @@
       </link>
     </model>
     <model name='unit_cylinder_83'>
+      <static>1</static>
       <pose frame=''>-4.425000 4.125000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4616,10 +4701,11 @@
       </link>
     </model>
     <model name='unit_cylinder_84'>
+      <static>1</static>
       <pose frame=''>-0.075000 4.275000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4670,10 +4756,11 @@
       </link>
     </model>
     <model name='unit_cylinder_85'>
+      <static>1</static>
       <pose frame=''>-4.425000 4.275000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4724,10 +4811,11 @@
       </link>
     </model>
     <model name='unit_cylinder_86'>
+      <static>1</static>
       <pose frame=''>-0.075000 4.425000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4778,10 +4866,11 @@
       </link>
     </model>
     <model name='unit_cylinder_87'>
+      <static>1</static>
       <pose frame=''>-4.425000 4.425000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4832,10 +4921,11 @@
       </link>
     </model>
     <model name='unit_cylinder_88'>
+      <static>1</static>
       <pose frame=''>-0.075000 4.575000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4886,10 +4976,11 @@
       </link>
     </model>
     <model name='unit_cylinder_89'>
+      <static>1</static>
       <pose frame=''>-4.425000 4.575000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4940,10 +5031,11 @@
       </link>
     </model>
     <model name='unit_cylinder_90'>
+      <static>1</static>
       <pose frame=''>-0.075000 4.725000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -4994,10 +5086,11 @@
       </link>
     </model>
     <model name='unit_cylinder_91'>
+      <static>1</static>
       <pose frame=''>-4.425000 4.725000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5048,10 +5141,11 @@
       </link>
     </model>
     <model name='unit_cylinder_92'>
+      <static>1</static>
       <pose frame=''>-0.075000 4.875000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5102,10 +5196,11 @@
       </link>
     </model>
     <model name='unit_cylinder_93'>
+      <static>1</static>
       <pose frame=''>-4.425000 4.875000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5156,10 +5251,11 @@
       </link>
     </model>
     <model name='unit_cylinder_94'>
+      <static>1</static>
       <pose frame=''>-0.075000 5.025000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5210,10 +5306,11 @@
       </link>
     </model>
     <model name='unit_cylinder_95'>
+      <static>1</static>
       <pose frame=''>-4.425000 5.025000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5264,10 +5361,11 @@
       </link>
     </model>
     <model name='unit_cylinder_96'>
+      <static>1</static>
       <pose frame=''>-4.425000 5.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5318,10 +5416,11 @@
       </link>
     </model>
     <model name='unit_cylinder_97'>
+      <static>1</static>
       <pose frame=''>-4.425000 5.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5372,10 +5471,11 @@
       </link>
     </model>
     <model name='unit_cylinder_98'>
+      <static>1</static>
       <pose frame=''>-4.425000 5.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5426,10 +5526,11 @@
       </link>
     </model>
     <model name='unit_cylinder_99'>
+      <static>1</static>
       <pose frame=''>-4.425000 5.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5480,10 +5581,11 @@
       </link>
     </model>
     <model name='unit_cylinder_100'>
+      <static>1</static>
       <pose frame=''>-4.425000 5.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5534,10 +5636,11 @@
       </link>
     </model>
     <model name='unit_cylinder_101'>
+      <static>1</static>
       <pose frame=''>-4.425000 5.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5588,10 +5691,11 @@
       </link>
     </model>
     <model name='unit_cylinder_102'>
+      <static>1</static>
       <pose frame=''>-4.425000 6.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5642,10 +5746,11 @@
       </link>
     </model>
     <model name='unit_cylinder_103'>
+      <static>1</static>
       <pose frame=''>-4.425000 6.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5696,10 +5801,11 @@
       </link>
     </model>
     <model name='unit_cylinder_104'>
+      <static>1</static>
       <pose frame=''>-4.425000 6.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5750,10 +5856,11 @@
       </link>
     </model>
     <model name='unit_cylinder_105'>
+      <static>1</static>
       <pose frame=''>-4.425000 6.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5804,10 +5911,11 @@
       </link>
     </model>
     <model name='unit_cylinder_106'>
+      <static>1</static>
       <pose frame=''>-4.425000 6.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5858,10 +5966,11 @@
       </link>
     </model>
     <model name='unit_cylinder_107'>
+      <static>1</static>
       <pose frame=''>-4.425000 6.825000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5912,10 +6021,11 @@
       </link>
     </model>
     <model name='unit_cylinder_108'>
+      <static>1</static>
       <pose frame=''>-4.425000 6.975000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -5966,10 +6076,11 @@
       </link>
     </model>
     <model name='unit_cylinder_109'>
+      <static>1</static>
       <pose frame=''>-4.425000 7.125000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6020,10 +6131,11 @@
       </link>
     </model>
     <model name='unit_cylinder_110'>
+      <static>1</static>
       <pose frame=''>-4.425000 7.275000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6074,10 +6186,11 @@
       </link>
     </model>
     <model name='unit_cylinder_111'>
+      <static>1</static>
       <pose frame=''>-4.425000 7.425000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6128,10 +6241,11 @@
       </link>
     </model>
     <model name='unit_cylinder_112'>
+      <static>1</static>
       <pose frame=''>-4.425000 7.575000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6182,10 +6296,11 @@
       </link>
     </model>
     <model name='unit_cylinder_113'>
+      <static>1</static>
       <pose frame=''>-4.425000 7.725000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6236,10 +6351,11 @@
       </link>
     </model>
     <model name='unit_cylinder_114'>
+      <static>1</static>
       <pose frame=''>-4.425000 7.875000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6290,10 +6406,11 @@
       </link>
     </model>
     <model name='unit_cylinder_115'>
+      <static>1</static>
       <pose frame=''>-4.425000 8.025000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6344,10 +6461,11 @@
       </link>
     </model>
     <model name='unit_cylinder_116'>
+      <static>1</static>
       <pose frame=''>-4.425000 8.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6398,10 +6516,11 @@
       </link>
     </model>
     <model name='unit_cylinder_117'>
+      <static>1</static>
       <pose frame=''>-4.425000 8.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6452,10 +6571,11 @@
       </link>
     </model>
     <model name='unit_cylinder_118'>
+      <static>1</static>
       <pose frame=''>-4.425000 8.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6506,10 +6626,11 @@
       </link>
     </model>
     <model name='unit_cylinder_119'>
+      <static>1</static>
       <pose frame=''>-4.425000 8.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6560,10 +6681,11 @@
       </link>
     </model>
     <model name='unit_cylinder_120'>
+      <static>1</static>
       <pose frame=''>-4.425000 8.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6614,10 +6736,11 @@
       </link>
     </model>
     <model name='unit_cylinder_121'>
+      <static>1</static>
       <pose frame=''>-4.425000 8.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6668,10 +6791,11 @@
       </link>
     </model>
     <model name='unit_cylinder_122'>
+      <static>1</static>
       <pose frame=''>-4.425000 9.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6722,10 +6846,11 @@
       </link>
     </model>
     <model name='unit_cylinder_123'>
+      <static>1</static>
       <pose frame=''>-4.425000 9.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6776,10 +6901,11 @@
       </link>
     </model>
     <model name='unit_cylinder_124'>
+      <static>1</static>
       <pose frame=''>-4.425000 9.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6830,10 +6956,11 @@
       </link>
     </model>
     <model name='unit_cylinder_125'>
+      <static>1</static>
       <pose frame=''>-4.425000 9.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6884,10 +7011,11 @@
       </link>
     </model>
     <model name='unit_cylinder_126'>
+      <static>1</static>
       <pose frame=''>-4.275000 7.275000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6938,10 +7066,11 @@
       </link>
     </model>
     <model name='unit_cylinder_127'>
+      <static>1</static>
       <pose frame=''>-4.275000 7.425000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -6992,10 +7121,11 @@
       </link>
     </model>
     <model name='unit_cylinder_128'>
+      <static>1</static>
       <pose frame=''>-4.275000 8.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7046,10 +7176,11 @@
       </link>
     </model>
     <model name='unit_cylinder_129'>
+      <static>1</static>
       <pose frame=''>-4.275000 8.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7100,10 +7231,11 @@
       </link>
     </model>
     <model name='unit_cylinder_130'>
+      <static>1</static>
       <pose frame=''>-4.275000 9.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7154,10 +7286,11 @@
       </link>
     </model>
     <model name='unit_cylinder_131'>
+      <static>1</static>
       <pose frame=''>-4.275000 9.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7208,10 +7341,11 @@
       </link>
     </model>
     <model name='unit_cylinder_132'>
+      <static>1</static>
       <pose frame=''>-4.275000 9.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7262,10 +7396,11 @@
       </link>
     </model>
     <model name='unit_cylinder_133'>
+      <static>1</static>
       <pose frame=''>-4.275000 9.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7316,10 +7451,11 @@
       </link>
     </model>
     <model name='unit_cylinder_134'>
+      <static>1</static>
       <pose frame=''>-4.125000 8.025000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7370,10 +7506,11 @@
       </link>
     </model>
     <model name='unit_cylinder_135'>
+      <static>1</static>
       <pose frame=''>-4.125000 8.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7424,10 +7561,11 @@
       </link>
     </model>
     <model name='unit_cylinder_136'>
+      <static>1</static>
       <pose frame=''>-4.125000 8.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7478,10 +7616,11 @@
       </link>
     </model>
     <model name='unit_cylinder_137'>
+      <static>1</static>
       <pose frame=''>-4.125000 8.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7532,10 +7671,11 @@
       </link>
     </model>
     <model name='unit_cylinder_138'>
+      <static>1</static>
       <pose frame=''>-4.125000 9.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7586,10 +7726,11 @@
       </link>
     </model>
     <model name='unit_cylinder_139'>
+      <static>1</static>
       <pose frame=''>-3.975000 6.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7640,10 +7781,11 @@
       </link>
     </model>
     <model name='unit_cylinder_140'>
+      <static>1</static>
       <pose frame=''>-3.975000 8.025000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7694,10 +7836,11 @@
       </link>
     </model>
     <model name='unit_cylinder_141'>
+      <static>1</static>
       <pose frame=''>-3.975000 8.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7748,10 +7891,11 @@
       </link>
     </model>
     <model name='unit_cylinder_142'>
+      <static>1</static>
       <pose frame=''>-3.975000 8.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7802,10 +7946,11 @@
       </link>
     </model>
     <model name='unit_cylinder_143'>
+      <static>1</static>
       <pose frame=''>-3.975000 8.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7856,10 +8001,11 @@
       </link>
     </model>
     <model name='unit_cylinder_144'>
+      <static>1</static>
       <pose frame=''>-3.825000 6.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7910,10 +8056,11 @@
       </link>
     </model>
     <model name='unit_cylinder_145'>
+      <static>1</static>
       <pose frame=''>-3.825000 6.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -7964,10 +8111,11 @@
       </link>
     </model>
     <model name='unit_cylinder_146'>
+      <static>1</static>
       <pose frame=''>-3.825000 6.975000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8018,10 +8166,11 @@
       </link>
     </model>
     <model name='unit_cylinder_147'>
+      <static>1</static>
       <pose frame=''>-3.825000 7.125000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8072,10 +8221,11 @@
       </link>
     </model>
     <model name='unit_cylinder_148'>
+      <static>1</static>
       <pose frame=''>-3.825000 8.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8126,10 +8276,11 @@
       </link>
     </model>
     <model name='unit_cylinder_149'>
+      <static>1</static>
       <pose frame=''>-3.675000 5.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8180,10 +8331,11 @@
       </link>
     </model>
     <model name='unit_cylinder_150'>
+      <static>1</static>
       <pose frame=''>-3.675000 6.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8234,10 +8386,11 @@
       </link>
     </model>
     <model name='unit_cylinder_151'>
+      <static>1</static>
       <pose frame=''>-3.675000 6.975000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8288,10 +8441,11 @@
       </link>
     </model>
     <model name='unit_cylinder_152'>
+      <static>1</static>
       <pose frame=''>-3.675000 8.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8342,10 +8496,11 @@
       </link>
     </model>
     <model name='unit_cylinder_153'>
+      <static>1</static>
       <pose frame=''>-3.675000 8.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8396,10 +8551,11 @@
       </link>
     </model>
     <model name='unit_cylinder_154'>
+      <static>1</static>
       <pose frame=''>-3.525000 5.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8450,10 +8606,11 @@
       </link>
     </model>
     <model name='unit_cylinder_155'>
+      <static>1</static>
       <pose frame=''>-3.525000 8.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8504,10 +8661,11 @@
       </link>
     </model>
     <model name='unit_cylinder_156'>
+      <static>1</static>
       <pose frame=''>-3.525000 8.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8558,10 +8716,11 @@
       </link>
     </model>
     <model name='unit_cylinder_157'>
+      <static>1</static>
       <pose frame=''>-3.375000 5.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8612,10 +8771,11 @@
       </link>
     </model>
     <model name='unit_cylinder_158'>
+      <static>1</static>
       <pose frame=''>-3.375000 5.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8666,10 +8826,11 @@
       </link>
     </model>
     <model name='unit_cylinder_159'>
+      <static>1</static>
       <pose frame=''>-3.375000 9.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8720,10 +8881,11 @@
       </link>
     </model>
     <model name='unit_cylinder_160'>
+      <static>1</static>
       <pose frame=''>-3.225000 5.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8774,10 +8936,11 @@
       </link>
     </model>
     <model name='unit_cylinder_161'>
+      <static>1</static>
       <pose frame=''>-3.225000 5.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8828,10 +8991,11 @@
       </link>
     </model>
     <model name='unit_cylinder_162'>
+      <static>1</static>
       <pose frame=''>-3.225000 9.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8882,10 +9046,11 @@
       </link>
     </model>
     <model name='unit_cylinder_163'>
+      <static>1</static>
       <pose frame=''>-3.225000 9.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8936,10 +9101,11 @@
       </link>
     </model>
     <model name='unit_cylinder_164'>
+      <static>1</static>
       <pose frame=''>-3.075000 5.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -8990,10 +9156,11 @@
       </link>
     </model>
     <model name='unit_cylinder_165'>
+      <static>1</static>
       <pose frame=''>-3.075000 9.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9044,10 +9211,11 @@
       </link>
     </model>
     <model name='unit_cylinder_166'>
+      <static>1</static>
       <pose frame=''>-3.075000 9.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9098,10 +9266,11 @@
       </link>
     </model>
     <model name='unit_cylinder_167'>
+      <static>1</static>
       <pose frame=''>-2.775000 6.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9152,10 +9321,11 @@
       </link>
     </model>
     <model name='unit_cylinder_168'>
+      <static>1</static>
       <pose frame=''>-2.775000 6.825000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9206,10 +9376,11 @@
       </link>
     </model>
     <model name='unit_cylinder_169'>
+      <static>1</static>
       <pose frame=''>-2.775000 6.975000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9260,10 +9431,11 @@
       </link>
     </model>
     <model name='unit_cylinder_170'>
+      <static>1</static>
       <pose frame=''>-2.625000 6.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9314,10 +9486,11 @@
       </link>
     </model>
     <model name='unit_cylinder_171'>
+      <static>1</static>
       <pose frame=''>-2.625000 6.825000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9368,10 +9541,11 @@
       </link>
     </model>
     <model name='unit_cylinder_172'>
+      <static>1</static>
       <pose frame=''>-2.475000 6.825000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9422,10 +9596,11 @@
       </link>
     </model>
     <model name='unit_cylinder_173'>
+      <static>1</static>
       <pose frame=''>-2.475000 7.725000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9476,10 +9651,11 @@
       </link>
     </model>
     <model name='unit_cylinder_174'>
+      <static>1</static>
       <pose frame=''>-2.325000 7.725000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9530,10 +9706,11 @@
       </link>
     </model>
     <model name='unit_cylinder_175'>
+      <static>1</static>
       <pose frame=''>-2.325000 7.875000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9584,10 +9761,11 @@
       </link>
     </model>
     <model name='unit_cylinder_176'>
+      <static>1</static>
       <pose frame=''>-2.175000 6.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9638,10 +9816,11 @@
       </link>
     </model>
     <model name='unit_cylinder_177'>
+      <static>1</static>
       <pose frame=''>-2.175000 6.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9692,10 +9871,11 @@
       </link>
     </model>
     <model name='unit_cylinder_178'>
+      <static>1</static>
       <pose frame=''>-2.025000 6.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9746,10 +9926,11 @@
       </link>
     </model>
     <model name='unit_cylinder_179'>
+      <static>1</static>
       <pose frame=''>-2.025000 6.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9800,10 +9981,11 @@
       </link>
     </model>
     <model name='unit_cylinder_180'>
+      <static>1</static>
       <pose frame=''>-1.875000 5.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9854,10 +10036,11 @@
       </link>
     </model>
     <model name='unit_cylinder_181'>
+      <static>1</static>
       <pose frame=''>-1.875000 6.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9908,10 +10091,11 @@
       </link>
     </model>
     <model name='unit_cylinder_182'>
+      <static>1</static>
       <pose frame=''>-1.875000 8.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -9962,10 +10146,11 @@
       </link>
     </model>
     <model name='unit_cylinder_183'>
+      <static>1</static>
       <pose frame=''>-1.875000 8.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10016,10 +10201,11 @@
       </link>
     </model>
     <model name='unit_cylinder_184'>
+      <static>1</static>
       <pose frame=''>-1.875000 9.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10070,10 +10256,11 @@
       </link>
     </model>
     <model name='unit_cylinder_185'>
+      <static>1</static>
       <pose frame=''>-1.875000 9.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10124,10 +10311,11 @@
       </link>
     </model>
     <model name='unit_cylinder_186'>
+      <static>1</static>
       <pose frame=''>-1.875000 9.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10178,10 +10366,11 @@
       </link>
     </model>
     <model name='unit_cylinder_187'>
+      <static>1</static>
       <pose frame=''>-1.725000 5.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10232,10 +10421,11 @@
       </link>
     </model>
     <model name='unit_cylinder_188'>
+      <static>1</static>
       <pose frame=''>-1.725000 5.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10286,10 +10476,11 @@
       </link>
     </model>
     <model name='unit_cylinder_189'>
+      <static>1</static>
       <pose frame=''>-1.725000 8.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10340,10 +10531,11 @@
       </link>
     </model>
     <model name='unit_cylinder_190'>
+      <static>1</static>
       <pose frame=''>-1.725000 9.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10394,10 +10586,11 @@
       </link>
     </model>
     <model name='unit_cylinder_191'>
+      <static>1</static>
       <pose frame=''>-1.725000 9.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10448,10 +10641,11 @@
       </link>
     </model>
     <model name='unit_cylinder_192'>
+      <static>1</static>
       <pose frame=''>-1.725000 9.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10502,10 +10696,11 @@
       </link>
     </model>
     <model name='unit_cylinder_193'>
+      <static>1</static>
       <pose frame=''>-1.725000 9.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10556,10 +10751,11 @@
       </link>
     </model>
     <model name='unit_cylinder_194'>
+      <static>1</static>
       <pose frame=''>-1.575000 8.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10610,10 +10806,11 @@
       </link>
     </model>
     <model name='unit_cylinder_195'>
+      <static>1</static>
       <pose frame=''>-1.575000 8.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10664,10 +10861,11 @@
       </link>
     </model>
     <model name='unit_cylinder_196'>
+      <static>1</static>
       <pose frame=''>-1.575000 9.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10718,10 +10916,11 @@
       </link>
     </model>
     <model name='unit_cylinder_197'>
+      <static>1</static>
       <pose frame=''>-1.575000 9.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10772,10 +10971,11 @@
       </link>
     </model>
     <model name='unit_cylinder_198'>
+      <static>1</static>
       <pose frame=''>-1.425000 8.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10826,10 +11026,11 @@
       </link>
     </model>
     <model name='unit_cylinder_199'>
+      <static>1</static>
       <pose frame=''>-1.425000 9.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10880,10 +11081,11 @@
       </link>
     </model>
     <model name='unit_cylinder_200'>
+      <static>1</static>
       <pose frame=''>-1.275000 8.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10934,10 +11136,11 @@
       </link>
     </model>
     <model name='unit_cylinder_201'>
+      <static>1</static>
       <pose frame=''>-1.125000 7.875000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -10988,10 +11191,11 @@
       </link>
     </model>
     <model name='unit_cylinder_202'>
+      <static>1</static>
       <pose frame=''>-1.125000 8.025000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11042,10 +11246,11 @@
       </link>
     </model>
     <model name='unit_cylinder_203'>
+      <static>1</static>
       <pose frame=''>-0.975000 8.025000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11096,10 +11301,11 @@
       </link>
     </model>
     <model name='unit_cylinder_204'>
+      <static>1</static>
       <pose frame=''>-0.975000 8.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11150,10 +11356,11 @@
       </link>
     </model>
     <model name='unit_cylinder_205'>
+      <static>1</static>
       <pose frame=''>-0.825000 8.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11204,10 +11411,11 @@
       </link>
     </model>
     <model name='unit_cylinder_206'>
+      <static>1</static>
       <pose frame=''>-0.825000 8.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11258,10 +11466,11 @@
       </link>
     </model>
     <model name='unit_cylinder_207'>
+      <static>1</static>
       <pose frame=''>-0.825000 8.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11312,10 +11521,11 @@
       </link>
     </model>
     <model name='unit_cylinder_208'>
+      <static>1</static>
       <pose frame=''>-0.825000 8.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11366,10 +11576,11 @@
       </link>
     </model>
     <model name='unit_cylinder_209'>
+      <static>1</static>
       <pose frame=''>-0.675000 5.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11420,10 +11631,11 @@
       </link>
     </model>
     <model name='unit_cylinder_210'>
+      <static>1</static>
       <pose frame=''>-0.675000 8.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11474,10 +11686,11 @@
       </link>
     </model>
     <model name='unit_cylinder_211'>
+      <static>1</static>
       <pose frame=''>-0.525000 5.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11528,10 +11741,11 @@
       </link>
     </model>
     <model name='unit_cylinder_212'>
+      <static>1</static>
       <pose frame=''>-0.525000 5.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11582,10 +11796,11 @@
       </link>
     </model>
     <model name='unit_cylinder_213'>
+      <static>1</static>
       <pose frame=''>-0.375000 5.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11636,10 +11851,11 @@
       </link>
     </model>
     <model name='unit_cylinder_214'>
+      <static>1</static>
       <pose frame=''>-0.375000 5.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11690,10 +11906,11 @@
       </link>
     </model>
     <model name='unit_cylinder_215'>
+      <static>1</static>
       <pose frame=''>-0.375000 5.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11744,10 +11961,11 @@
       </link>
     </model>
     <model name='unit_cylinder_216'>
+      <static>1</static>
       <pose frame=''>-0.375000 5.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11798,10 +12016,11 @@
       </link>
     </model>
     <model name='unit_cylinder_217'>
+      <static>1</static>
       <pose frame=''>-0.375000 5.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11852,10 +12071,11 @@
       </link>
     </model>
     <model name='unit_cylinder_218'>
+      <static>1</static>
       <pose frame=''>-0.375000 7.125000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11906,10 +12126,11 @@
       </link>
     </model>
     <model name='unit_cylinder_219'>
+      <static>1</static>
       <pose frame=''>-0.225000 5.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -11960,10 +12181,11 @@
       </link>
     </model>
     <model name='unit_cylinder_220'>
+      <static>1</static>
       <pose frame=''>-0.225000 5.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12014,10 +12236,11 @@
       </link>
     </model>
     <model name='unit_cylinder_221'>
+      <static>1</static>
       <pose frame=''>-0.225000 6.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12068,10 +12291,11 @@
       </link>
     </model>
     <model name='unit_cylinder_222'>
+      <static>1</static>
       <pose frame=''>-0.225000 6.825000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12122,10 +12346,11 @@
       </link>
     </model>
     <model name='unit_cylinder_223'>
+      <static>1</static>
       <pose frame=''>-0.225000 6.975000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12176,10 +12401,11 @@
       </link>
     </model>
     <model name='unit_cylinder_224'>
+      <static>1</static>
       <pose frame=''>-0.225000 7.125000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12230,10 +12456,11 @@
       </link>
     </model>
     <model name='unit_cylinder_225'>
+      <static>1</static>
       <pose frame=''>-0.225000 7.275000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12284,10 +12511,11 @@
       </link>
     </model>
     <model name='unit_cylinder_226'>
+      <static>1</static>
       <pose frame=''>-0.225000 7.425000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12338,10 +12566,11 @@
       </link>
     </model>
     <model name='unit_cylinder_227'>
+      <static>1</static>
       <pose frame=''>-0.225000 7.575000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12392,10 +12621,11 @@
       </link>
     </model>
     <model name='unit_cylinder_228'>
+      <static>1</static>
       <pose frame=''>-0.225000 8.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12446,10 +12676,11 @@
       </link>
     </model>
     <model name='unit_cylinder_229'>
+      <static>1</static>
       <pose frame=''>-0.225000 9.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12500,10 +12731,11 @@
       </link>
     </model>
     <model name='unit_cylinder_230'>
+      <static>1</static>
       <pose frame=''>-0.075000 5.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12554,10 +12786,11 @@
       </link>
     </model>
     <model name='unit_cylinder_231'>
+      <static>1</static>
       <pose frame=''>-0.075000 5.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12608,10 +12841,11 @@
       </link>
     </model>
     <model name='unit_cylinder_232'>
+      <static>1</static>
       <pose frame=''>-0.075000 5.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12662,10 +12896,11 @@
       </link>
     </model>
     <model name='unit_cylinder_233'>
+      <static>1</static>
       <pose frame=''>-0.075000 5.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12716,10 +12951,11 @@
       </link>
     </model>
     <model name='unit_cylinder_234'>
+      <static>1</static>
       <pose frame=''>-0.075000 5.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12770,10 +13006,11 @@
       </link>
     </model>
     <model name='unit_cylinder_235'>
+      <static>1</static>
       <pose frame=''>-0.075000 5.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12824,10 +13061,11 @@
       </link>
     </model>
     <model name='unit_cylinder_236'>
+      <static>1</static>
       <pose frame=''>-0.075000 6.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12878,10 +13116,11 @@
       </link>
     </model>
     <model name='unit_cylinder_237'>
+      <static>1</static>
       <pose frame=''>-0.075000 6.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12932,10 +13171,11 @@
       </link>
     </model>
     <model name='unit_cylinder_238'>
+      <static>1</static>
       <pose frame=''>-0.075000 6.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -12986,10 +13226,11 @@
       </link>
     </model>
     <model name='unit_cylinder_239'>
+      <static>1</static>
       <pose frame=''>-0.075000 6.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13040,10 +13281,11 @@
       </link>
     </model>
     <model name='unit_cylinder_240'>
+      <static>1</static>
       <pose frame=''>-0.075000 6.675000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13094,10 +13336,11 @@
       </link>
     </model>
     <model name='unit_cylinder_241'>
+      <static>1</static>
       <pose frame=''>-0.075000 6.825000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13148,10 +13391,11 @@
       </link>
     </model>
     <model name='unit_cylinder_242'>
+      <static>1</static>
       <pose frame=''>-0.075000 6.975000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13202,10 +13446,11 @@
       </link>
     </model>
     <model name='unit_cylinder_243'>
+      <static>1</static>
       <pose frame=''>-0.075000 7.125000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13256,10 +13501,11 @@
       </link>
     </model>
     <model name='unit_cylinder_244'>
+      <static>1</static>
       <pose frame=''>-0.075000 7.275000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13310,10 +13556,11 @@
       </link>
     </model>
     <model name='unit_cylinder_245'>
+      <static>1</static>
       <pose frame=''>-0.075000 7.425000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13364,10 +13611,11 @@
       </link>
     </model>
     <model name='unit_cylinder_246'>
+      <static>1</static>
       <pose frame=''>-0.075000 7.575000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13418,10 +13666,11 @@
       </link>
     </model>
     <model name='unit_cylinder_247'>
+      <static>1</static>
       <pose frame=''>-0.075000 7.725000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13472,10 +13721,11 @@
       </link>
     </model>
     <model name='unit_cylinder_248'>
+      <static>1</static>
       <pose frame=''>-0.075000 7.875000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13526,10 +13776,11 @@
       </link>
     </model>
     <model name='unit_cylinder_249'>
+      <static>1</static>
       <pose frame=''>-0.075000 8.025000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13580,10 +13831,11 @@
       </link>
     </model>
     <model name='unit_cylinder_250'>
+      <static>1</static>
       <pose frame=''>-0.075000 8.175000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13634,10 +13886,11 @@
       </link>
     </model>
     <model name='unit_cylinder_251'>
+      <static>1</static>
       <pose frame=''>-0.075000 8.325000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13688,10 +13941,11 @@
       </link>
     </model>
     <model name='unit_cylinder_252'>
+      <static>1</static>
       <pose frame=''>-0.075000 8.475000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13742,10 +13996,11 @@
       </link>
     </model>
     <model name='unit_cylinder_253'>
+      <static>1</static>
       <pose frame=''>-0.075000 8.625000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13796,10 +14051,11 @@
       </link>
     </model>
     <model name='unit_cylinder_254'>
+      <static>1</static>
       <pose frame=''>-0.075000 8.775000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13850,10 +14106,11 @@
       </link>
     </model>
     <model name='unit_cylinder_255'>
+      <static>1</static>
       <pose frame=''>-0.075000 8.925000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13904,10 +14161,11 @@
       </link>
     </model>
     <model name='unit_cylinder_256'>
+      <static>1</static>
       <pose frame=''>-0.075000 9.075000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -13958,10 +14216,11 @@
       </link>
     </model>
     <model name='unit_cylinder_257'>
+      <static>1</static>
       <pose frame=''>-0.075000 9.225000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -14012,10 +14271,11 @@
       </link>
     </model>
     <model name='unit_cylinder_258'>
+      <static>1</static>
       <pose frame=''>-0.075000 9.375000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
@@ -14066,10 +14326,11 @@
       </link>
     </model>
     <model name='unit_cylinder_259'>
+      <static>1</static>
       <pose frame=''>-0.075000 9.525000 0.000000 0.000000 0.000000 0.000000</pose>
       <link name='link'>
         <inertial>
-          <mass>100</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.145833</ixx>
             <ixy>0</ixy>
