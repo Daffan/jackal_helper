@@ -8,12 +8,15 @@
   <!-- Short-term hack to support the original front_laser:=true argument for spawning
        the simulator. This will be removed in favour of using the config:=x arg instead. -->
   <arg name="VLP16" default="true" />
+  <arg name="verbose" default="true" />
   <arg name="camera" default="false" />
   <arg name="default_config" value="VLP16" if="$(arg VLP16)" />
   <arg name="default_config" value="LSM" unless="$(arg VLP16)" />
+  <arg name="console_conf" value="0.conf" if="$(arg verbose)" />
+  <arg name="verbose" value="1.conf" unless="$(arg verbose)" />
   <!-- end of hack -->
 
-  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find jackal_helper)/configs/custom_rosconsole.conf"/>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find jackal_helper)/configs/$(arg console_conf)"/>
 
   <!-- Configuration of Jackal which you would like to simulate.
        See jackal_description for details. -->
