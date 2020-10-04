@@ -13,7 +13,7 @@
   <arg name="default_config" value="VLP16" if="$(arg VLP16)" />
   <arg name="default_config" value="LSM" unless="$(arg VLP16)" />
   <arg name="console_conf" value="0.conf" if="$(arg verbose)" />
-  <arg name="verbose" value="1.conf" unless="$(arg verbose)" />
+  <arg name="console_conf" value="1.conf" unless="$(arg verbose)" />
   <!-- end of hack -->
 
   <env name="ROSCONSOLE_CONFIG_FILE" value="$(find jackal_helper)/configs/$(arg console_conf)"/>
